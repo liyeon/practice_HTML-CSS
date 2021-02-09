@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 
+    공유를 위한 작업
+    og:image 카카오 링크에서 뜨는 큰 이미지
+    og: title 링크 제목
+    og:description 링크 설명
+-->
+<meta property="og:image" content="https://www.christmastreeassociation.org/wp-content/uploads/2016/06/multiple-christmas-trees-in-one-household-800x400.jpg">
+<meta property="og:title" content="길동이의 카드">
+<meta property="og:description" content="2020을 추억하며">
+<!-- 파비콘 -->
+<link rel="shortcut icon" href="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png">
+<title>2020 마무리</title>
+<style>
+    /* 눈누 폰트 이용 / 넥슨 배찌체*/
+    @font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    *{
+        font-family: 'Bazzi';
+    }
+    body{
+        background: #9b070f;
+    }
+    .envelope{
+        width: 200px;
+        height: 200px;
+
+        background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+
+        margin: 200px auto 0  auto;
+
+        cursor: pointer;
+    }
+
+    .envelope-msg{
+        color: #fff;
+        text-align: center;
+    }
+
+    /* .letter-close{
+    } */
+
+    .letter-open{
+        display: none;
+    }
+
+    .rtan{
+        width: 200px;
+        height: 200px;
+
+        background-image: url('https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/rtan.gif');
+        background-size: cover;
+        background-position: center;
+
+        background-color: #fff;
+
+        margin:100px auto 0px auto;
+        border-radius: 50%;
+        border: 5px solid #fff;
+
+        box-shadow: 0px 0px 10px 0px #fff;
+    }
+
+    h1{
+        color: #fff;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .messagebox{
+        background-color: ivory;
+
+        width: 400px;
+        margin: auto;
+
+        color: brown;
+
+        padding: 20px;
+        font-size: 20px;
+        line-height: 1.5em;
+
+        box-shadow: 0px 0px 10px 0px #fff;
+    }
+
+    .from{
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 760px) {
+        .messagebox{
+            width: 250px;
+        }
+        .rtan {
+            width: 150px;
+            height: 150px;
+            margin: 70px auto 0px auto;
+        }  
+        h1{
+            font-size: 28px;
+        }
+        .envelope{
+            margin: 150px auto 0px auto;
+        }
+</style>
+</head>
+<body>
+    <div class="letter-close">
+        <div class="envelope" onclick="open_letter()"></div>
+        <h2 class="envelope-msg">
+            봉투를 열어봐!
+        </h2>
+    </div>
+
+    <div class="letter-open">
+        <div class="rtan" onclick="go_rtan()"></div>
+        <h1>2020년 수고 많았어!</h1>
+        <div class="messagebox">
+            친구들에게. <br />
+            올해 이런저런 일이 많았는데 <br />
+            너희 덕분에 하나도 힘들지 않았어 <br />
+            내년에도 우리 우정 변치말자 <br />
+            연말에 다 같이 못 봐서 아쉽다 <br />
+            <p class="from">2020.12.30 르탄이가</p>
+        </div>
+    </div>
+</body>
+<!-- 눈오는 라이브러리 -->
+<script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+<script>
+function open_letter() {
+  document.getElementsByClassName("letter-close")[0].style.display= 'none';
+  document.getElementsByClassName("letter-open")[0].style.display= 'block';
+}
+
+function go_rtan() {
+    alert("앗, 앗 어떻게 찾았쥐")
+    window.location.href="http://github.com/liyeon/";
+}
+</script>
+</html>
