@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>Random Number Game</h1>
+  
+  <form class="js-rangeForm"
+        oninput="output.value=parseInt(num.value)">
+
+    <h3>Generate a number between 0 and
+      <output name="output" for="num">0</output>
+    </h3>
+
+    <input type="range"
+    value="0" min="0" max="200"
+    list="tickmarks" 
+    class="js-range" 
+    id="num">
+
+    <datalist id="tickmarks">
+      <option value="0"></option>
+      <option value="50"></option>
+      <option value="100"></option>
+      <option value="150"></option>
+      <option value="200"></option>
+    </datalist>
+
+    <h4>
+      Guess the number: 
+      <input type="number" class="js-num" value="0" min="0" max="200">
+      <input type="submit" value="play!" class="js-button">
+    </h4>
+  </form>
+
+  
+
+  <ul class="js-list">
+    <li class="js-youChose">You Chose : </li>
+    <li class="js-machineChose">Machine Chose : </li>
+  </ul>
+
+  <h2 class="js-result"></h2>
+  <script src="index.js"></script>
+</body>
+</html>
