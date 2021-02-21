@@ -23,7 +23,7 @@ function deleteToDo(event) {
     });
     //toDos 를 cleanToDos로 바꿔줌 
     toDos = cleanToDos;
-    window.location.reload();
+    // window.location.reload();
     saveToDos();
     // console.log("cleanToDos", cleanToDos);
 }
@@ -35,7 +35,7 @@ function saveToDos(){
 }
 
 function paintToDo(text){
-    console.log(text);
+    // console.log(text);
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
@@ -75,17 +75,17 @@ function handleSubmit(event){
 function loadToDos(){
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null) {
-        console.log(loadedToDos);
+        // console.log(loadedToDos);
 
         // 스트링을 배열, 오브젝트 형태로 바꿔줌
         const parsedToDos = JSON.parse(loadedToDos);
 
-        console.log(parsedToDos);
+        // console.log(parsedToDos);
 
         // array 가 가진 forEach
         // forEach 는 기본적으로 함수를 실행하는데 array에 담겨있는 것들을 각각에 한번씩 함수를 실행시켜준다. ( 반복문 )
         parsedToDos.forEach(function(toDo){
-            console.log(toDo.text);
+            // console.log(toDo.text);
             paintToDo(toDo.text);
         });
     }
