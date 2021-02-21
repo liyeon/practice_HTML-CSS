@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+@font-face {
+    font-family: 'Binggrae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: #2c3e50;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.clicked {
+    color: #7f8c8d;
+}
+
+.form, .greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+    margin: 0;
+}
+
+.wrap {
+    width: 1500px;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.wrap div {
+    display: inline-block;
+}
+.container {
+    width: 1500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clock {
+    width: 700px;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0px 0px 4px #BDBDBD;
+}
+
+.clock h1{
+    transition: color 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+    font-size: 8em;
+    font-family: 'Wallpoet'!important;
+}
+.clock span{
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+.greetings {
+    font-family: 'Binggrae';
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0px 0px 4px #BDBDBD;
+}
+li {
+    font-family: 'Binggrae';
+}
+
+.name {
+    width: 100%;
+    padding: 20px 0;
+}
+input {
+    border: 5px solid #fff;
+    outline: none;
+    background: #fff0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 700px;
+    border-radius: 30px;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 4px #BDBDBD;
+    color: #fff;
+}
+input::placeholder {
+    color: #fff;
+    font-family: 'Binggrae';
+}
+
+.todo {
+    animation: fadeIn 0.5s linear;
+    width: 700px;
+}
+
+.todoList {
+    box-sizing: border-box;
+    padding: 50px;
+    background: #ffffff8f;
+    border-radius: 30px;
+    margin: 20px 0;
+    height: 400px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 4px #BDBDBD;
+    position: relative;
+}
+
+.todoList li {
+    width: 100%;
+    line-height: 1.5em;
+    padding-bottom: 10px;
+}
+.todoList li:last-child{
+    padding-bottom: 0;
+}
+.todoList li span{
+    font-size: 1.5em;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
+    width:93%;
+    display: inline-block;
+    text-shadow: 0px 0px 4px #BDBDBD;
+}
+.todoList li button{
+    font-size: 2em;
+    display: none;
+    border: none;
+    outline: none;
+    background: #fff0;
+    cursor: pointer;
+}
+.todoList li:hover button{
+    display: inline-block;
+}
